@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Form Submission</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+            font-size: 16px;
+            line-height: 1.5;
+            background-color: #f4f4f4;
+            color: #333333;
+        }
+        .email-wrapper {
+            max-width: 600px;
+            margin: 20px auto;
+            background-color: #ffffff;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        .email-header {
+            background-color: #e9844c; /* Horizon's primary color */
+            padding: 30px 24px;
+            text-align: center;
+        }
+        .email-body {
+            padding: 30px 24px;
+            background-color: #ffffff;
+        }
+        .email-footer {
+            background-color: #f6f6f6;
+            padding: 20px 24px;
+            text-align: center;
+            font-size: 14px;
+            color: #666666;
+        }
+        h1 {
+            color: #ffffff;
+            font-size: 28px;
+            margin: 0;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            font-size: 24px;
+            color: #e9844c; /* Horizon's primary color */
+            text-align: center;
+            margin: 20px 0;
+        }
+        p {
+            margin-top: 0;
+            margin-bottom: 20px;
+        }
+        .details {
+            background-color: #eef2ff; /* Light blue background from Horizon */
+            padding: 15px;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+        .details p {
+            margin: 8px 0;
+            font-size: 16px;
+            line-height: 1.5;
+        }
+        .details strong {
+            color: #4f46e5; /* Horizon's secondary color for emphasis */
+            font-weight: 600;
+        }
+        a {
+            color: #4f46e5; /* Horizon's secondary color */
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="email-wrapper">
+        <div class="email-header">
+            <h1>New Contact Form Submission</h1>
+        </div>
+        <div class="email-body">
+            <p>Hello,</p>
+            <p>You have received a new contact form submission on your website. Below are the details:</p>
+            <div class="details">
+                <p><strong>Name:</strong> <%= name %></p>
+                <p><strong>Email:</strong> <%= email %></p>
+                <p><strong>Message:</strong> <%= message %></p>
+            </div>
+            <p>Please respond to this inquiry at your earliest convenience.</p>
+        </div>
+        <div class="email-footer">
+            <p>© 2025 Your Website. All rights reserved.</p>
+        </div>
+    </div>
+</body>
+</html>
