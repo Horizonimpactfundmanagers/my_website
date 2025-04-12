@@ -20,7 +20,7 @@ app.use(express.json({ limit: "50mb" }));
 app.use(cookieParser());
 
 const allowedOrigins = [
-  // 'http://localhost:3000',
+  'http://localhost:3000',
   "https://horizon-frontend-appp.vercel.app",
   'https://www.horizonimpactfundmanagers.com',
   'https://horizonimpactfundmanagers.com',

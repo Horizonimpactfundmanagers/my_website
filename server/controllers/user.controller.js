@@ -40,44 +40,6 @@ const createActivationToken = (userData) => {
     return { token, activationCode };
 };
 
-// export const registerUser = async (req, res, next) => {
-//     try {
-//         const { name, email, password } = req.body;
-//         const isEmailExists = await User.findOne({ email });
-//         if (isEmailExists) {
-//             return next(new ErrorHandler("Email already exists!", 400));
-//         }
-
-//         const { token: activationToken, activationCode } = createActivationToken({ name, email, password });
-
-//         const data = { user: { name }, activationCode };
-//         const templatePath = join(__dirname, '..', 'mails', 'activation-mail.ejs');
-
-//         try {
-//             const html = await ejs.renderFile(templatePath, data);
-//             await sendMail({
-//                 email: email,
-//                 subject: "Activate your email",
-//                 html: html,
-//             });
-
-//             res.status(200).json({
-//                 success: true,
-//                 message: `Please check your email ${email} to activate your account`,
-//                 activationToken,
-//                 user: { name, email },
-//             });
-//         } catch (error) {
-//             console.error("Error in email sending:", error);
-//             return next(new ErrorHandler(error.message, 500));
-//         }
-//     } catch (error) {
-//         console.error("Error in user registration:", error);
-//         return next(new ErrorHandler(error.message, 500));
-//     }
-// };
-
-
 
 export const registerUser = async (req, res, next) => {
     try {
@@ -261,14 +223,12 @@ export const getUserInfo = async (req, res, next) => {
     }
 };
 
-
-
 // Social Auth function
 export const socialAuth = async (req, res, next) => {
     try {
         const { email, name, socialimage } = req.body;
         // console.log("avatar");
-        // console.log(req.body);
+        console.log(req.body);
 
         let user = await User.findOne({ email });
 

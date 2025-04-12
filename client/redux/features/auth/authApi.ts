@@ -83,6 +83,8 @@ export const authApi = apiSlice.injectEndpoints({
         }
       },
     }),
+
+
     socialAuth: builder.mutation({
       query: ({ email, name, socialimage }) => ({
         url: "social-auth",
@@ -108,6 +110,10 @@ export const authApi = apiSlice.injectEndpoints({
         }
       },
     }),
+
+
+
+    
     logout: builder.query({
       query: () => ({
         url: "logout",
