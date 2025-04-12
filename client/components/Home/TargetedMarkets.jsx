@@ -70,7 +70,7 @@ const sectors = [
   {
     id: 5,
     name: "Sports and Creative Industry",
-    image: "/assets/marketers/General-Contractors.jpg",
+    image: "/assets/marketers/General-Contractors.png",
     description:
       "The sports and creative sectors are powerful engines for economic growth, cultural preservation, and youth empowerment. Horizon Impact Fund sees untapped potential in leveraging these industries for community development.",
     focusAreas: [
